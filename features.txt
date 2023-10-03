@@ -16,10 +16,9 @@ longitude - GPS coordinate
 latitude - GPS coordinate
 
 wpt_name - Name of the waterpoint if there is one
-num_private -
+num_private - Might refer to the number of private entities or households using the well.
 
 basin - Geographic water basin
-
 subvillage - Geographic location
 region - Geographic location
 region_code - Geographic location (coded)
@@ -62,3 +61,67 @@ source_class - The source of the water
 
 waterpoint_type - The kind of waterpoint
 waterpoint_type_group - The kind of waterpoint
+
+
+
+
+
+'id': A unique identifier for each water well.
+
+'amount_tsh': Total static head. Likely refers to the amount of water available in the well, measured in some unit (e.g., liters or cubic meters).
+
+'date_recorded': The date when the information about the well was recorded.
+
+'funder': The organization or individual that funded the well's construction or establishment.
+
+'gps_height': The altitude of the well, likely measured in meters above sea level. This might be used to infer the depth of the well or the geographical/topographical context.
+
+'installer': The entity (organization or individual) that installed or constructed the well.
+
+'longitude' and 'latitude': The geographic coordinates of the well, indicating its precise location.
+
+'wpt_name': The name of the water point (well). It could be a local name or some official designation.
+
+'num_private': This is a bit unclear without more context, but it might refer to the number of private entities or households using the well.
+
+'basin': The larger water catchment area or basin where the well is located.
+
+'subvillage': The smaller subdivision of a village where the well is situated.
+
+'region': The broader geographical region in which the well is located.
+
+'region_code': A code representing the region, perhaps for data processing or categorization purposes.
+
+'district_code': Similar to region_code, but for the district level.
+
+'lga': Local Government Area – an administrative division within the country.
+
+'ward': A smaller administrative division within the LGA or district.
+m
+'population': The population of the area served by the well. This might indicate how many people rely on it.
+
+'public_meeting': Possibly a boolean indicating whether a public meeting was held regarding the well.
+
+'recorded_by': The individual or organization that recorded the information about the well.
+
+'scheme_management': Describes how the well is managed, e.g., by a local committee, a private company, a governmental organization, etc.
+
+'scheme_name': The name of the management scheme or program under which the well operates.
+
+'permit': Might indicate whether the well has an official permit or authorization to operate.
+
+'construction_year': The year the well was constructed.
+
+'extraction_type', 'extraction_type_group', 'extraction_type_class': These columns likely categorize the mechanism or method used to extract water from the well, with varying levels of granularity.
+
+'management' and 'management_group': Describe who manages the well and possibly the broader categorization of the management entity.
+
+'payment' and 'payment_type': Might describe if and how users pay for the water they extract. This could be important for maintenance considerations.
+
+'water_quality' and 'quality_group': Describe the quality of the water, e.g., salty, turbid, clean, etc.
+
+'quantity' and 'quantity_group': Likely refer to the amount of water available in the well, either regularly or at the time of recording.
+
+'source', 'source_type', and 'source_class': Describe the source of the water, e.g., rainwater, groundwater, spring, etc., with varying levels of detail.
+
+'waterpoint_type' and 'waterpoint_type_group': Describe the physical structure or type of the well, e.g., hand pump, tap, borehole, etc.
