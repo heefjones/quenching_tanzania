@@ -1,71 +1,3 @@
-40 features used in analysis:
-
-
-
-amount_tsh - Total static head (amount water available to waterpoint)
-
-date_recorded - The date the row was entered
-
-funder - Who funded the well
-
-gps_height - Altitude of the well
-
-installer - Organization that installed the well
-
-longitude - GPS coordinate
-latitude - GPS coordinate
-
-wpt_name - Name of the waterpoint if there is one
-num_private - Might refer to the number of private entities or households using the well.
-
-basin - Geographic water basin
-subvillage - Geographic location
-region - Geographic location
-region_code - Geographic location (coded)
-district_code - Geographic location (coded)
-lga - Geographic location
-ward - Geographic location
-
-population - Population around the well
-
-public_meeting - True/False
-
-recorded_by - Group entering this row of data
-
-scheme_management - Who operates the waterpoint
-scheme_name - Who operates the waterpoint
-
-permit - If the waterpoint is permitted
-
-construction_year - Year the waterpoint was constructed
-
-extraction_type - The kind of extraction the waterpoint uses
-extraction_type_group - The kind of extraction the waterpoint uses
-extraction_type_class - The kind of extraction the waterpoint uses
-
-management - How the waterpoint is managed
-management_group - How the waterpoint is managed
-
-payment - What the water costs
-payment_type - What the water costs
-
-water_quality - The quality of the water
-quality_group - The quality of the water
-
-quantity - The quantity of water
-quantity_group - The quantity of water
-
-source - The source of the water
-source_type - The source of the water
-source_class - The source of the water
-
-waterpoint_type - The kind of waterpoint
-waterpoint_type_group - The kind of waterpoint
-
-
-
-
-
 'id': A unique identifier for each water well.
 
 'amount_tsh': Total static head. Likely refers to the amount of water available in the well, measured in some unit (e.g., liters or cubic meters).
@@ -97,7 +29,7 @@ waterpoint_type_group - The kind of waterpoint
 'lga': Local Government Area – an administrative division within the country.
 
 'ward': A smaller administrative division within the LGA or district.
-m
+
 'population': The population of the area served by the well. This might indicate how many people rely on it.
 
 'public_meeting': Possibly a boolean indicating whether a public meeting was held regarding the well.
