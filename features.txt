@@ -1,3 +1,6 @@
+Columns in dataset:
+
+
 'id': A unique identifier for each water well.
 
 'amount_tsh': Total static head. Likely refers to the amount of water available in the well, measured in some unit (e.g., liters or cubic meters).
