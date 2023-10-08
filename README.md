@@ -7,7 +7,7 @@ Given various features of water wells in Tanzania, predict each well's condition
   - Functional, Needs repairs (class 1)
   - Non-functional (class 2)
 
-The end goal is to build a predictive model that properly identifies each of these 3 classes with maximum accuracy.
+The end goal was to build a predictive model that properly identifies each of these 3 classes with maximum accuracy. Identifying classes 1 and 2 (dysfunctional wells) was a higher priority, as the consequences for misidentifying these wells could be human lives.
 
 
 
@@ -35,27 +35,45 @@ In total, 15 features were removed, and water well age was added. This resulted 
 
 
 # Modeling
-All models in this repo were built using [sklearn.LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html).
+Aside from the dummy model, all models in this repo were built using [sklearn.LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html).
+
+> All accuracies referenced in this section are drawn from the testing data - data that our model has yet to see.
+
+> "__Dysfunctional__" accuracy refers to the combined prediction accuracy for "non-functional" and "needs repair" wells.
 
 ### Simple Models
 The modeling process began by building 3 [simple models](./simple_models.ipynb) with no hyperparameter tuning:
 
 1. The baseline model (sklearn.DummyClassifier):
-   - The baseline model simply predicted the most common class (functional), and predicted with 54.2% accuracy.
+    - The baseline model simply predicted the most common class (functional), and predicted with 54.2% accuracy.
 2. A base logistic regression:
-   - This model used default parameters and predicted with 77.7% accuracy.
-   - It struggled to classify the "needs repair" wells, as they only maded up 7% of our dataset. Below, I incorporate synthetic minority oversampling ([SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)) to address this.
+    - This model used default parameters and predicted with 77.7% accuracy.
+    - It struggled to classify the "needs repair" wells, as they only maded up 7% of our dataset. Below, I incorporate synthetic minority oversampling ([SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)) to address this.
 3. Base logistic regression with SMOTE:
-  - The predictions for class 1 were indeed more accurate. However, the accuracies of both class 0 and class 2 declined. The overall prediction accuracy decreased to 64%.
+    - The predictions for class 1 were indeed more accurate. However, the accuracies of both class 0 and class 2 declined. The overall prediction accuracy decreased to 64%.
 
-he base logistic regression was now the benchmark at 77.7% accuracy, and all future models were built to .
+The base logistic regression was now the benchmark with 77.7% overall accuracy and x% dysfunctional accuracy. Future models were designed to beat these numbers.
 
 ### Final models
+Final models were found by conducting iterative grid searches, and taking the most consistent hyperparameters from each search. I strived to find models that had both an impressive overall accuracy, as well as a remarkable propensity to identify dysfunctional wells.
+
+__The TriWell Predictor__
+The TWP took the same ternary classification approach as the simple models, but this time with optimized parameters:
+- x% overall accuracy
+- x% dysfunctional accuracy
+
+__The AquaClassify Pro__
+The AC Pro turned the classification problem into a binary one, combining the two "dysfunctional" well categories as class 1:
+- x% overall accuracy
+- x% dysfunctional accuracy
+
+Overall the final recommendation was the __x__, as it demonstrated great accuracy to properly identify wells at large, as well as an impressive dyfunctional accuracy.
 
 
 
 # Repo ToC:
 
 - [Data cleaning notebook](./cleaning.ipynb)
+- [Simple models](./simple_models.ipynb)
 - [Final models notebook](./model_pipeline.ipynb)
 - [Description of features](./features.txt)
