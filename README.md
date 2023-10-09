@@ -79,4 +79,4 @@ Overall the final recommendation was the __The AquaClassify Pro__, as it demonst
 - [Simple models](./simple_models.ipynb)
 - [Final models notebook](./model_pipeline.ipynb)
 - [Description of features](./features.txt)
-- [Slide Deck] (./presentation.pdf)
+- [Slide Deck](./presentation.pdf)
