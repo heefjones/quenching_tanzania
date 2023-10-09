@@ -16,7 +16,7 @@ The end goal was to build a predictive model that properly identifies each of th
 # Data
 The [data](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/data/) consisted of close to 60,000 water wells in Tanzania, recorded by GeoData Consultants Ltd. The data contained the well's type, water source, geographical info, as well as payment information and the organizations or governmental bodies involved. Here is a chart of the class distribution:
 
-![Class distribution](./visuals/data.png)
+![Class distribution](./visuals/chart.png)
 
 
 
