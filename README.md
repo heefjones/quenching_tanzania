@@ -1,5 +1,7 @@
 # Overview
+Tanzania is a country where 16 million people lack access to safe water. This is 27% of the population. We want to create a predictive model that can predict water well functionality based on several [input features](./features.txt). We especially want to be able to predict when a well isn't functional, so we can repair it accordingly. In this notebook, we attempt to find the best combination of hyperparamters that produces the most accurate predictions.
 
+We would like to recommend a predictive model to [The US Agency of international development](https://www.usaid.gov/) so that they can identify non-functional wells in Tanzania, and then take the proper repair actions to prevent human deaths.
 
 # Objective:
 Given various features of water wells in Tanzania, predict each well's condition/functionality. The possible values for well functionality are as follows:
@@ -59,15 +61,15 @@ Final models were found by conducting iterative grid searches, and taking the mo
 
 __The TriWell Predictor__
 The TWP took the same ternary classification approach as the simple models, but this time with optimized parameters:
-- x% overall accuracy
-- x% dysfunctional accuracy
+- 77.7% overall accuracy
+- 64.7% dysfunctional accuracy
 
 __The AquaClassify Pro__
 The AC Pro turned the classification problem into a binary one, combining the two "dysfunctional" well categories as class 1:
-- x% overall accuracy
-- x% dysfunctional accuracy
+- 79.4% overall accuracy
+- 71.3% dysfunctional accuracy
 
-Overall the final recommendation was the __x__, as it demonstrated great accuracy to properly identify wells at large, as well as an impressive dyfunctional accuracy.
+Overall the final recommendation was the __The AquaClassify Pro__, as it demonstrated great accuracy to properly identify wells at large, as well as an impressive dyfunctional accuracy.
 
 
 
